@@ -46,6 +46,8 @@ public class PlayerController : MonoBehaviour
     public CinemachineRotationComposer camRotation;
     private void Start()
     {
+        // locks the cursor to the center of the screen
+        Cursor.lockState = CursorLockMode.Locked;
         // set a speed of movement to the walking speed
         moveSpeed = walkSpeed;
         // set current height of collider and regular height of walking/running
