@@ -467,7 +467,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 34
+  m_VersionIndex: 46
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1302,7 +1302,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 758
+  m_VersionIndex: 770
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1569,54 +1569,54 @@ MonoBehaviour:
   - m_Vertices: 0b0000000e00000012000000
   m_SharedTextures: []
   m_Positions:
-  - {x: -5, y: -0.5, z: 5}
-  - {x: 5, y: -0.5, z: 5}
-  - {x: -5, y: 0.5, z: 5}
-  - {x: 5, y: 0.5, z: 5}
-  - {x: 5, y: -0.5, z: 5}
-  - {x: 5, y: -0.5, z: -5}
-  - {x: 5, y: 0.5, z: 5}
-  - {x: 5, y: 0.5, z: -5}
-  - {x: 5, y: -0.5, z: -5}
-  - {x: -5, y: -0.5, z: -5}
-  - {x: 5, y: 0.5, z: -5}
-  - {x: -5, y: 0.5, z: -5}
-  - {x: -5, y: -0.5, z: -5}
-  - {x: -5, y: -0.5, z: 5}
-  - {x: -5, y: 0.5, z: -5}
-  - {x: -5, y: 0.5, z: 5}
-  - {x: -5, y: 0.5, z: 5}
-  - {x: 5, y: 0.5, z: 5}
-  - {x: -5, y: 0.5, z: -5}
-  - {x: 5, y: 0.5, z: -5}
-  - {x: -5, y: -0.5, z: -5}
-  - {x: 5, y: -0.5, z: -5}
-  - {x: -5, y: -0.5, z: 5}
-  - {x: 5, y: -0.5, z: 5}
+  - {x: -5.5, y: -0.5, z: 5.5}
+  - {x: 5.5, y: -0.5, z: 5.5}
+  - {x: -5.5, y: 0.5, z: 5.5}
+  - {x: 5.5, y: 0.5, z: 5.5}
+  - {x: 5.5, y: -0.5, z: 5.5}
+  - {x: 5.5, y: -0.5, z: -5.5}
+  - {x: 5.5, y: 0.5, z: 5.5}
+  - {x: 5.5, y: 0.5, z: -5.5}
+  - {x: 5.5, y: -0.5, z: -5.5}
+  - {x: -5.5, y: -0.5, z: -5.5}
+  - {x: 5.5, y: 0.5, z: -5.5}
+  - {x: -5.5, y: 0.5, z: -5.5}
+  - {x: -5.5, y: -0.5, z: -5.5}
+  - {x: -5.5, y: -0.5, z: 5.5}
+  - {x: -5.5, y: 0.5, z: -5.5}
+  - {x: -5.5, y: 0.5, z: 5.5}
+  - {x: -5.5, y: 0.5, z: 5.5}
+  - {x: 5.5, y: 0.5, z: 5.5}
+  - {x: -5.5, y: 0.5, z: -5.5}
+  - {x: 5.5, y: 0.5, z: -5.5}
+  - {x: -5.5, y: -0.5, z: -5.5}
+  - {x: 5.5, y: -0.5, z: -5.5}
+  - {x: -5.5, y: -0.5, z: 5.5}
+  - {x: 5.5, y: -0.5, z: 5.5}
   m_Textures0:
-  - {x: 10, y: 0}
+  - {x: 11, y: 0}
   - {x: 0, y: 0}
-  - {x: 10, y: 1}
+  - {x: 11, y: 1}
   - {x: 0, y: 1}
-  - {x: 10, y: 0}
+  - {x: 11, y: 0}
   - {x: 0, y: 0}
-  - {x: 10, y: 1}
+  - {x: 11, y: 1}
   - {x: 0, y: 1}
-  - {x: 10, y: 0}
+  - {x: 11, y: 0}
   - {x: 0, y: 0}
-  - {x: 10, y: 1}
+  - {x: 11, y: 1}
   - {x: 0, y: 1}
-  - {x: 10, y: 0}
+  - {x: 11, y: 0}
   - {x: 0, y: 0}
-  - {x: 10, y: 1}
+  - {x: 11, y: 1}
   - {x: 0, y: 1}
   - {x: 0, y: 1}
-  - {x: 10, y: 1}
-  - {x: 0, y: -9}
-  - {x: 10, y: -9}
-  - {x: 10, y: -9}
-  - {x: 0, y: -9}
-  - {x: 10, y: 1}
+  - {x: 11, y: 1}
+  - {x: 0, y: -10}
+  - {x: 11, y: -10}
+  - {x: 11, y: -10}
+  - {x: 0, y: -10}
+  - {x: 11, y: 1}
   - {x: 0, y: 1}
   m_Textures2: []
   m_Textures3: []
@@ -1654,7 +1654,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 100
+  m_VersionIndex: 156
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1674,8 +1674,8 @@ MonoBehaviour:
   m_Shape:
     rid: 8660626894108491783
   m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 100
-  m_Size: {x: 10, y: 1, z: 10}
+  m_UnmodifiedMeshVersion: 144
+  m_Size: {x: 11, y: 1, z: 11}
   m_LocalCenter: {x: 0, y: 0, z: 0}
   references:
     version: 2
@@ -2006,7 +2006,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 70
+  m_VersionIndex: 82
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2358,7 +2358,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 70
+  m_VersionIndex: 82
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3191,7 +3191,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 758
+  m_VersionIndex: 770
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3762,7 +3762,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 34
+  m_VersionIndex: 46
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4597,7 +4597,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 758
+  m_VersionIndex: 770
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5168,7 +5168,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 34
+  m_VersionIndex: 46
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5522,7 +5522,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 70
+  m_VersionIndex: 82
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5636,7 +5636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7126357977720692612}
   m_Layer: 0
-  m_Name: Room
+  m_Name: Room_4Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5911,7 +5911,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 70
+  m_VersionIndex: 82
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6744,7 +6744,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 758
+  m_VersionIndex: 770
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7350,7 +7350,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 34
+  m_VersionIndex: 46
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
