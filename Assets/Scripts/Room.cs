@@ -1,16 +1,17 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    // set a list to reference the doors
+    public List<GameObject> doors = new List<GameObject>();
 
-    // Update is called once per frame
-    void Update()
+    public void OpenDoors(bool[] status)
     {
-        
+        for (int i = 0; i < doors.Count; i++)
+        {
+            // open doors if false, close if true
+            doors[i].SetActive(status[i]);
+        }
     }
 }

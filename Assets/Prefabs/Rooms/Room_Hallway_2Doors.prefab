@@ -967,6 +967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4521002762895165168}
+  - component: {fileID: -1629435481291159768}
   m_Layer: 0
   m_Name: Room_Hallway_2Doors
   m_TagString: Untagged
@@ -996,6 +997,21 @@ Transform:
   - {fileID: 7663406314998712367}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-1629435481291159768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4805988478559523783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d8937a7d013f644b756e783042ce0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doors:
+  - {fileID: 7785400805197445955}
+  - {fileID: 256277881188549959}
 --- !u!1 &5694770912839756629
 GameObject:
   m_ObjectHideFlags: 0

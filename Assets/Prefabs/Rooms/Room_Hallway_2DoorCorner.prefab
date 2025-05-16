@@ -2230,6 +2230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9016136826574249548}
+  - component: {fileID: 5100276051269895875}
   m_Layer: 0
   m_Name: Room_Hallway_2DoorCorner
   m_TagString: Untagged
@@ -2260,6 +2261,21 @@ Transform:
   - {fileID: 1875117694413647276}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5100276051269895875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4895583517180520410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d8937a7d013f644b756e783042ce0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doors:
+  - {fileID: 140078770666071735}
+  - {fileID: 167689499714280066}
 --- !u!1 &5010340827822630664
 GameObject:
   m_ObjectHideFlags: 0
