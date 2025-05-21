@@ -1011,7 +1011,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 7785400805197445955}
+  - {fileID: 0}
   - {fileID: 256277881188549959}
+  - {fileID: 0}
 --- !u!1 &5694770912839756629
 GameObject:
   m_ObjectHideFlags: 0

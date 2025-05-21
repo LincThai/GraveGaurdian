@@ -5723,6 +5723,7 @@ MonoBehaviour:
   doors:
   - {fileID: 1805274598431005723}
   - {fileID: 6832004023254531697}
+  - {fileID: 0}
   - {fileID: 8990997340315897473}
 --- !u!1 &8990997340315897473
 GameObject:

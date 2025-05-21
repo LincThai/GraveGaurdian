@@ -9016,6 +9016,7 @@ MonoBehaviour:
   doors:
   - {fileID: 2091710413388907710}
   - {fileID: 8205240661252606664}
+  - {fileID: 0}
   - {fileID: 4575623467519027484}
 --- !u!1 &8205240661252606664
 GameObject:
