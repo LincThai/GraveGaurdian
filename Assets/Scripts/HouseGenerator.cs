@@ -95,6 +95,8 @@ public class HouseGenerator : MonoBehaviour
                     }
                 }
             }
+            // call CheckNeighbors function
+            CheckNeightbors(rooms);
         }
 
         // spawns roof
@@ -103,6 +105,54 @@ public class HouseGenerator : MonoBehaviour
         // adds roof to list
         currentHouseComp.Add(roof);
     }
+
+    public void CheckNeightbors(GameObject[,] spawnedRooms)
+    {
+        // make a array to store available doors for the current room
+        bool[] currentDoorDir = new bool[4];
+
+        for (int x = 0; x < spawnedRooms.GetLength(0); x++)
+        {
+            for (int y = 0; y < spawnedRooms.GetLength(1); y++)
+            {
+                // get the current room you are going to check
+                Room currentRoom = spawnedRooms[x, y].GetComponent<Room>();
+                // find all the doors for the current room and store it
+                for (int i = 0; i < currentRoom.doors.Count; i++)
+                {
+                    // check if there is a door
+                    if (currentRoom.doors[i] != null)
+                    {
+                        // store true in the same spot in this array
+                        currentDoorDir[i] = true;
+                    }
+                    else { currentDoorDir[i] = false; }
+                }
+
+                // right()
+                if (spawnedRooms[x + 1, y] != null)
+                {
+                    // get the doors and check if there are connected doors
+                }
+                // left()
+                if (spawnedRooms[x - 1, y] != null)
+                {
+                    // get the doors and check if there are connected doors
+                }
+                // up()
+                if (spawnedRooms[x, y + 1] != null)
+                {
+                    // get the doors and check if there are connected doors
+                }
+                // down()
+                if (spawnedRooms[x, y - 1] != null)
+                {
+                    // get the doors and check if there are connected doors
+                }
+            }
+        }
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
