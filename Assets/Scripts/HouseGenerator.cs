@@ -133,22 +133,49 @@ public class HouseGenerator : MonoBehaviour
                 if (spawnedRooms[x + 1, y] != null)
                 {
                     // get the doors and check if there are connected doors
+                    Room roomCheck = spawnedRooms[x + 1, y].GetComponent<Room>();
+                    if (roomCheck.doors[3] != null)
+                    {
+                        currentDoorDir[1] = true;
+                    }
+                    else {currentDoorDir[1] = false; }
                 }
                 // left()
                 if (spawnedRooms[x - 1, y] != null)
                 {
                     // get the doors and check if there are connected doors
+                    Room roomCheck = spawnedRooms[x - 1, y].GetComponent<Room>();
+                    if (roomCheck.doors[1] != null)
+                    {
+                        currentDoorDir[3] = true;
+                    }
+                    else { currentDoorDir[3] = false; }
                 }
                 // up()
                 if (spawnedRooms[x, y + 1] != null)
                 {
                     // get the doors and check if there are connected doors
+                    Room roomCheck = spawnedRooms[x, y + 1].GetComponent<Room>();
+                    if (roomCheck.doors[2] != null)
+                    {
+                        currentDoorDir[0] = true;
+                    }
+                    else { currentDoorDir[0] = false; }
                 }
                 // down()
                 if (spawnedRooms[x, y - 1] != null)
                 {
                     // get the doors and check if there are connected doors
+                    Room roomCheck = spawnedRooms[x, y + 1].GetComponent<Room>();
+                    if (roomCheck.doors[0] != null)
+                    {
+                        currentDoorDir[2] = true;
+                    }
+                    else { currentDoorDir[2] = false; }
                 }
+
+                // call the open doors functiom un the current room
+                currentRoom.OpenDoors(currentDoorDir);
             }
         }
     }
