@@ -40,7 +40,7 @@ public class HouseGenerator : MonoBehaviour
         do
         {
             // assign a random numbers of rooms to each element of the array
-            numOfRooms = Random.Range(1, numOfSlots * numOfSlots);
+            numOfRooms = numOfSlots;// Random.Range(1, numOfSlots);
             floorRooms[n] = numOfRooms;
             n++;
         } while (n < numOfFloors);
@@ -74,11 +74,14 @@ public class HouseGenerator : MonoBehaviour
                 // this picks a random spot to spawn stairs
                 stairX = Random.Range(0, rooms.GetLength(0));
                 stairY = Random.Range(0, rooms.GetLength(1));
-                // this spawns the stairs
-                rooms[stairX, stairY] = Instantiate(roomTypes[1], new Vector3(0, 0, 0), Quaternion.identity, currentFloor.transform);
-                // sets the position then save it
-                rooms[stairX, stairY].transform.localPosition = new Vector3( stairX * roomSize, 0, stairY * -roomSize);
-                stairPos = rooms[stairX, stairY].transform.localPosition;
+                if (rooms[stairX, stairY] == null)
+                {
+                    // this spawns the start stairs
+                    rooms[stairX, stairY] = Instantiate(roomTypes[1], new Vector3(0, 0, 0), Quaternion.identity, currentFloor.transform);
+                    // sets the position then save it
+                    rooms[stairX, stairY].transform.localPosition = new Vector3( stairX * roomSize, 0, stairY * roomSize);
+                    stairPos = rooms[stairX, stairY].transform.localPosition;
+                }
             }
             
             for (int x = 0; x < rooms.GetLength(0); x++)
@@ -91,7 +94,7 @@ public class HouseGenerator : MonoBehaviour
                         // spawn a random room type that is not stair components or the start room
                         rooms[x, y] = Instantiate(roomTypes[Random.Range(3, roomTypes.Count)], new Vector3(0, 0, 0), Quaternion.identity, currentFloor.transform);
                         // set the position of each room
-                        rooms[x, y].transform.localPosition = new Vector3( x * roomSize, 0, y * -roomSize);
+                        rooms[x, y].transform.localPosition = new Vector3( x * roomSize, 0, y * roomSize);
                     }
                 }
             }
@@ -130,48 +133,49 @@ public class HouseGenerator : MonoBehaviour
                 }
 
                 // right()
-                if (spawnedRooms[x + 1, y] != null)
+                if (x < spawnedRooms.GetLength(0)-1 && spawnedRooms[x + 1, y] != null)
                 {
                     // get the doors and check if there are connected doors
                     Room roomCheck = spawnedRooms[x + 1, y].GetComponent<Room>();
                     if (roomCheck.doors[3] != null)
                     {
-                        currentDoorDir[1] = true;
+                        currentDoorDir[1] = false;
                     }
-                    else {currentDoorDir[1] = false; }
+                    else {currentDoorDir[1] = true; }
                 }
                 // left()
-                if (spawnedRooms[x - 1, y] != null)
+                if (x > 0 && spawnedRooms[x - 1, y] != null)
                 {
                     // get the doors and check if there are connected doors
                     Room roomCheck = spawnedRooms[x - 1, y].GetComponent<Room>();
+
                     if (roomCheck.doors[1] != null)
                     {
-                        currentDoorDir[3] = true;
+                        currentDoorDir[3] = false;
                     }
-                    else { currentDoorDir[3] = false; }
+                    else { currentDoorDir[3] = true; }
                 }
                 // up()
-                if (spawnedRooms[x, y + 1] != null)
+                if (y < spawnedRooms.GetLength(1) - 1 && spawnedRooms[x, y + 1] != null)
                 {
                     // get the doors and check if there are connected doors
                     Room roomCheck = spawnedRooms[x, y + 1].GetComponent<Room>();
                     if (roomCheck.doors[2] != null)
                     {
-                        currentDoorDir[0] = true;
+                        currentDoorDir[0] = false;
                     }
-                    else { currentDoorDir[0] = false; }
+                    else { currentDoorDir[0] = true; }
                 }
                 // down()
-                if (spawnedRooms[x, y - 1] != null)
+                if (y > 0 && spawnedRooms[x, y - 1] != null)
                 {
                     // get the doors and check if there are connected doors
-                    Room roomCheck = spawnedRooms[x, y + 1].GetComponent<Room>();
+                    Room roomCheck = spawnedRooms[x, y - 1].GetComponent<Room>();
                     if (roomCheck.doors[0] != null)
                     {
-                        currentDoorDir[2] = true;
+                        currentDoorDir[2] = false;
                     }
-                    else { currentDoorDir[2] = false; }
+                    else { currentDoorDir[2] = true; }
                 }
 
                 // call the open doors functiom un the current room

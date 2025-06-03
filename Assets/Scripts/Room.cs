@@ -4,7 +4,7 @@ using UnityEngine;
 public class Room : MonoBehaviour
 {
     // set a list to reference the doors
-    // 0 = up, 1 = right, 2 = down, 3 = left
+    // 0 = up = +z, 1 = right +x, 2 = down = -z, 3 = left = -x
     public List<GameObject> doors = new List<GameObject>();
 
     public void OpenDoors(bool[] status)
@@ -12,7 +12,10 @@ public class Room : MonoBehaviour
         for (int i = 0; i < doors.Count; i++)
         {
             // open doors if false, close if true
-            doors[i].SetActive(status[i]);
+            if (doors[i] != null)
+            {
+                doors[i].SetActive(status[i]);
+            }
         }
     }
 }

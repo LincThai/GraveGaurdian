@@ -163,9 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39aa402c7c3a76489aeb7c3741fb24f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorHeight: 4
+  floorHeight: 5
   roomSize: 11
-  numOfSlots: 4
+  numOfSlots: 8
   maxNumFloors: 5
   numOfFloors: 0
   floorType: 0
