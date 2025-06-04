@@ -6,18 +6,25 @@ public class PlayerCombat : MonoBehaviour
     // if I animate an attack this is the animator
 
     // primary variables
-    public Transform attackPoint;
-    public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+    public Transform attackPoint;
+
+    public float attackRange = 0.5f;
     public int attackDamage = 30;
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
 
     // Update is called once per frame
     void Update()
     {
-        // get the player input
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Time.time >= nextAttackTime)
         {
-            Attack();
+            // get the player input
+            if (Input.GetKey(KeyCode.Mouse0))
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
         }
     }
 
@@ -31,7 +38,7 @@ public class PlayerCombat : MonoBehaviour
         // damage them
         foreach (Collider enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            enemy.GetComponent<Enemy>()?.TakeDamage(attackDamage);
         }
     }
 
