@@ -1,13 +1,25 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class EnemyController : MonoBehaviour
 {
     // set variables
+    // enemy Movement/AI variables
     public float lookRadius = 10f;
+
     // references
     Transform target;
     NavMeshAgent agent;
+
+    // enemy attack variables
+    public float attackRange = 0.5f;
+    public int attackDamage = 20;
+    public float attackRate = 1f;
+    float nextAttackTime = 0;
+
+    public Transform attackPoint;
+    public LayerMask PlayerLayers;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,19 +43,38 @@ public class EnemyController : MonoBehaviour
 
             if (distance <= agent.stoppingDistance)
             {
-                // attack the target
-
                 // face the target
                 FaceTarget();
+
+                if (Time.time >= nextAttackTime)
+                {
+                    // attack the target
+                    AttackPlayer();
+                    nextAttackTime = Time.time + 1f / attackRate;
+                }
             }
         }
     }
 
     public void FaceTarget()
     {
-        Vector3 direction = (transform.position - target.position).normalized;
+        Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+    }
+
+    public void AttackPlayer()
+    {
+        // detect everything that is hit
+        Collider[] hitPlayers = Physics.OverlapSphere(attackPoint.position, attackRange, PlayerLayers);
+
+        // play an attack animation
+
+        // deal damage
+        foreach (Collider player in hitPlayers)
+        {
+            player.GetComponent<PlayerCombat>()?.PlayerTakeDamage(attackDamage);
+        }
     }
 
     private void OnDrawGizmosSelected()

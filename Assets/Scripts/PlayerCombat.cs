@@ -14,6 +14,15 @@ public class PlayerCombat : MonoBehaviour
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
+    public int maxPlayerHealth = 200;
+    public int currentPlayerHealth;
+
+    void Start()
+    {
+        // set health
+        currentPlayerHealth = maxPlayerHealth;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -22,7 +31,9 @@ public class PlayerCombat : MonoBehaviour
             // get the player input
             if (Input.GetKey(KeyCode.Mouse0))
             {
+                // anything in range (in front of player)
                 Attack();
+                // increases the time till the next attack based on the rate
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
@@ -39,6 +50,20 @@ public class PlayerCombat : MonoBehaviour
         foreach (Collider enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>()?.TakeDamage(attackDamage);
+        }
+    }
+
+    public void PlayerTakeDamage (int damage)
+    {
+        // deal the damage
+        currentPlayerHealth -= damage;
+
+        // play hurt animation
+
+        // check if player dies(Loses)
+        if (currentPlayerHealth <= 0)
+        {
+            Debug.Log("You Lose");
         }
     }
 
