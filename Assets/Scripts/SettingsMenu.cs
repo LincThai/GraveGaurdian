@@ -5,7 +5,7 @@ public class SettingsMenu : MonoBehaviour
 {
     // set variables
     // references
-    public AudioMixer audioMixer;
+    public AudioMixer audioMixer;  
 
     // adjust Master audiomixer group by main volume slider
     public void SetMainVolume(float volume)
