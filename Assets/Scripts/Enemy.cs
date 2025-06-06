@@ -9,8 +9,9 @@ public class Enemy : MonoBehaviour
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public virtual void Start()
     {
+        // set the current health equal to the maximum
         currentHealth = maxHealth;
     }
 
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void Death()
+    public virtual void Death()
     {
         // if there is play a death animation
 

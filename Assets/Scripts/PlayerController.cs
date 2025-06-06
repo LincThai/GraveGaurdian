@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     // references
     [Header("References")]
     public CharacterController controller;
-    public Transform cam;
 
     // basic player variables
     [Header("Basic Player Movement Info")]
@@ -79,7 +78,7 @@ public class PlayerController : MonoBehaviour
         float z = Input.GetAxisRaw("Vertical"); // also known as y in 2d graph
 
         // set a nomalized vector for movement based on input
-        Vector3 direction = new Vector3(x, 0, z).normalized;
+        Vector3 direction = transform.right * x + transform.forward * z; ;
 
         if (isCrouching == true)
         {
@@ -117,16 +116,8 @@ public class PlayerController : MonoBehaviour
         // check their has been input
         if (direction.magnitude >= 0.1f)
         {
-            // find the target angle based on movement then smooth and apply
-            // take into account the camera angles
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0, angle, 0);
-
-            // make new movement vector 3 based of the direction the camera is facing on y axis
-            Vector3 moveDir = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
             // apply movement
-            controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
+            controller.Move(direction.normalized * moveSpeed * Time.deltaTime);
         }
 
         // jump

@@ -37,6 +37,11 @@ public class PlayerCombat : MonoBehaviour
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
+
+        if (currentPlayerHealth > maxPlayerHealth)
+        {
+            currentPlayerHealth = maxPlayerHealth;
+        }
     }
 
     public void Attack()
@@ -50,6 +55,7 @@ public class PlayerCombat : MonoBehaviour
         foreach (Collider enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>()?.TakeDamage(attackDamage);
+            enemy.GetComponent<Crate>()?.TakeDamage(attackDamage);
         }
     }
 

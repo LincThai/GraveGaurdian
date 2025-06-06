@@ -2,15 +2,24 @@ using UnityEngine;
 
 public class Crate : Enemy
 {
+    // set variables
+    public int healthHealed = 30;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    PlayerCombat playerCombat;
+
+    public override void Start()
     {
+        playerCombat = PlayerManager.instance.player.GetComponent<PlayerCombat>();
+        // uses original code to setup health
+        base.Start();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Death()
     {
-        
+        // heal the player
+        playerCombat.currentPlayerHealth += healthHealed;
+
+        // use the original code
+        base.Death();
     }
 }
