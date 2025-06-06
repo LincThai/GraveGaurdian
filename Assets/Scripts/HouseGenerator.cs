@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
 
 public class HouseGenerator : MonoBehaviour
@@ -107,6 +108,7 @@ public class HouseGenerator : MonoBehaviour
             new Vector3(0, numOfFloors * floorHeight, 0), Quaternion.identity, transform);
         // adds roof to list
         currentHouseComp.Add(roof);
+        GetComponent<NavMeshSurface>()?.BuildNavMesh();
     }
 
     public void CheckNeightbors(GameObject[,] spawnedRooms)

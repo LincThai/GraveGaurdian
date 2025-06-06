@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UIElements;
 
 public class EnemyController : MonoBehaviour
 {
@@ -79,7 +78,13 @@ public class EnemyController : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        // set gizmo color
         Gizmos.color = Color.red;
+        // draw sphere to show area where enemy will react to the player
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+        // check if their is an attack point
+        if (attackPoint == null) { return; }
+        // draw a sphere to show attack area/range
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

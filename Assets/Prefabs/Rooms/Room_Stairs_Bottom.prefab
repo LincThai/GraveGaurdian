@@ -69,7 +69,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3150464419224268162}
-  m_Father: {fileID: 5167607032051912670}
+  m_Father: {fileID: 2434110829389997555}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &3941536092238108466
 MonoBehaviour:
@@ -894,11 +894,11 @@ Transform:
   m_GameObject: {fileID: 713767843602021942}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5167607032051912670}
+  m_Father: {fileID: 4997357880420428079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1287824415539873400
 Light:
@@ -988,6 +988,38 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &761550051084380130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4997357880420428079}
+  m_Layer: 0
+  m_Name: Lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4997357880420428079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761550051084380130}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3577339965124605672}
+  m_Father: {fileID: 5167607032051912670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2091710413388907710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,7 +1959,7 @@ GameObject:
   - component: {fileID: 512369318475310615}
   - component: {fileID: 308158214269721346}
   - component: {fileID: 412676488983586474}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5219,7 +5251,7 @@ GameObject:
   - component: {fileID: 4811358709673373921}
   - component: {fileID: 1174733144524811032}
   - component: {fileID: 4675237897766334429}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6164,7 +6196,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5167607032051912670}
+  m_Father: {fileID: 2434110829389997555}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6182969999108939869
 MonoBehaviour:
@@ -6757,7 +6789,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 242429180345331760}
-  m_Father: {fileID: 5167607032051912670}
+  m_Father: {fileID: 2434110829389997555}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &769363369266418858
 MonoBehaviour:
@@ -7590,7 +7622,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7780752584121468498}
-  m_Father: {fileID: 5167607032051912670}
+  m_Father: {fileID: 2434110829389997555}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &8679259497351175004
 MonoBehaviour:
@@ -8991,14 +9023,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5264690888600255416}
-  - {fileID: 818027740153331106}
-  - {fileID: 7966425591379594163}
-  - {fileID: 6437332532851899240}
   - {fileID: 2617951612378599060}
   - {fileID: 1030187462145077653}
   - {fileID: 6360214242990540915}
-  - {fileID: 3577339965124605672}
+  - {fileID: 2434110829389997555}
+  - {fileID: 4997357880420428079}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7157216533535126151
@@ -9018,6 +9047,41 @@ MonoBehaviour:
   - {fileID: 4575623467519027484}
   - {fileID: 2091710413388907710}
   - {fileID: 8205240661252606664}
+--- !u!1 &8083994172521087546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2434110829389997555}
+  m_Layer: 0
+  m_Name: Walls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2434110829389997555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083994172521087546}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5264690888600255416}
+  - {fileID: 818027740153331106}
+  - {fileID: 7966425591379594163}
+  - {fileID: 6437332532851899240}
+  m_Father: {fileID: 5167607032051912670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8205240661252606664
 GameObject:
   m_ObjectHideFlags: 0

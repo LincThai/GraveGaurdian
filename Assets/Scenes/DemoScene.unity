@@ -36228,13 +36228,21 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9b4ff2f30c9ae7f439823f8be802b65e, type: 2}
+    - target: {fileID: 8317338050273055571, guid: 6b531e16aeaf9d245816ffea2d93dd41, type: 3}
+      propertyPath: attackRange
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8397611579835803476, guid: 6b531e16aeaf9d245816ffea2d93dd41, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1071154197}
     - target: {fileID: 8397611579835803476, guid: 6b531e16aeaf9d245816ffea2d93dd41, type: 3}
       propertyPath: m_VersionIndex
-      value: 401
+      value: 404
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117873263635268568, guid: 6b531e16aeaf9d245816ffea2d93dd41, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -119933,10 +119941,6 @@ PrefabInstance:
     - target: {fileID: 597323854314050602, guid: 420680eaa0a22f044aa7ba1ca334a6cd, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1931737517385412501, guid: 420680eaa0a22f044aa7ba1ca334a6cd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7912039732102999004, guid: 420680eaa0a22f044aa7ba1ca334a6cd, type: 3}
       propertyPath: m_LocalPosition.x
