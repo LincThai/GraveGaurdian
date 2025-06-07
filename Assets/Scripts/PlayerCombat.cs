@@ -3,7 +3,8 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     // set variables
-    // if I animate an attack this is the animator
+    // Animator
+    public Animator playerAnimator;
 
     // primary variables
     public LayerMask enemyLayers;
@@ -46,7 +47,8 @@ public class PlayerCombat : MonoBehaviour
 
     public void Attack()
     {
-        // if I animate an attack animation play animation 
+        // trigger an attack parameter in the animator to play the attack animation
+        playerAnimator.SetTrigger("Attack");
 
         // detect enemies in range of attack
         Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
@@ -63,8 +65,6 @@ public class PlayerCombat : MonoBehaviour
     {
         // deal the damage
         currentPlayerHealth -= damage;
-
-        // play hurt animation
 
         // check if player dies(Loses)
         if (currentPlayerHealth <= 0)

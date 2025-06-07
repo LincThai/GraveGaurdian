@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     // references
     Transform target;
     NavMeshAgent agent;
+    Animator enemyAnimator;
 
     // enemy attack variables
     public float attackRange = 0.5f;
@@ -68,6 +69,7 @@ public class EnemyController : MonoBehaviour
         Collider[] hitPlayers = Physics.OverlapSphere(attackPoint.position, attackRange, PlayerLayers);
 
         // play an attack animation
+        enemyAnimator.SetTrigger("Attack");
 
         // deal damage
         foreach (Collider player in hitPlayers)

@@ -5,8 +5,8 @@ public class Enemy : MonoBehaviour
     // set variables
     public int maxHealth = 100;
     int currentHealth;
-    // the animator if there are animations
-
+    // the animator
+    public Animator enemyAnimator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public virtual void Start()
@@ -20,7 +20,8 @@ public class Enemy : MonoBehaviour
         // deal the damage
         currentHealth -= damage;
 
-        // if there is an animation hurt animation play
+        // hurt animation play
+        enemyAnimator.SetTrigger("Hurt");
 
         // check if they die
         if (currentHealth <= 0)
@@ -31,7 +32,8 @@ public class Enemy : MonoBehaviour
 
     public virtual void Death()
     {
-        // if there is play a death animation
+        // play a death animation
+        enemyAnimator.SetBool("IsDead", true);
 
         // disable or destroy the enemy
         Destroy(gameObject);
