@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  enemyAnimator: {fileID: 0}
+  enemyAnimator: {fileID: 2581264252822021912}
 --- !u!114 &2658214553810548394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,13 +138,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10
+  enemyAnimator: {fileID: 2581264252822021912}
   attackRange: 0.5
-  attackDamage: 20
-  attackRate: 3
+  attackDamage: 10
+  attackRate: 1
   attackPoint: {fileID: 1943185209683102163}
   PlayerLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
 --- !u!95 &2581264252822021912
 Animator:
   serializedVersion: 7

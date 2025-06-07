@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
     // references
     Transform target;
     NavMeshAgent agent;
-    Animator enemyAnimator;
+    public Animator enemyAnimator;
 
     // enemy attack variables
     public float attackRange = 0.5f;

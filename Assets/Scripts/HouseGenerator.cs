@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class HouseGenerator : MonoBehaviour
 {
@@ -59,13 +60,13 @@ public class HouseGenerator : MonoBehaviour
             if (i == 0)
             {
                 // spawn the starting room
-                rooms[0, 0] = Instantiate(roomTypes[0], new Vector3(0, 0, 0), Quaternion.identity, currentFloor.transform);
+                rooms[0, 0] = Instantiate(roomTypes[0], new Vector3( 0, 0, 0), Quaternion.identity, currentFloor.transform);
             }
 
             if (i - 1 >= 0)
             {
                 // spawn the stair opening for the stairs
-                rooms[stairX, stairY] = Instantiate(roomTypes[2], new Vector3(0, 0, 0), Quaternion.identity , currentFloor.transform);
+                rooms[stairX, stairY] = Instantiate(roomTypes[2], new Vector3( 0, 0, 0), Quaternion.identity , currentFloor.transform);
                 // set the position
                 rooms[stairX, stairY].transform.localPosition = stairPos;
             }
@@ -78,10 +79,24 @@ public class HouseGenerator : MonoBehaviour
                 if (rooms[stairX, stairY] == null)
                 {
                     // this spawns the start stairs
-                    rooms[stairX, stairY] = Instantiate(roomTypes[1], new Vector3(0, 0, 0), Quaternion.identity, currentFloor.transform);
+                    rooms[stairX, stairY] = Instantiate(roomTypes[1], new Vector3( 0, 0, 0), Quaternion.identity, currentFloor.transform);
                     // sets the position then save it
                     rooms[stairX, stairY].transform.localPosition = new Vector3( stairX * roomSize, 0, stairY * roomSize);
                     stairPos = rooms[stairX, stairY].transform.localPosition;
+                }
+            }
+
+            if (i + 1 >= numOfFloors)
+            {
+                // randomize position of end room
+                int endX = Random.Range(0, rooms.GetLength(0));
+                int endY = Random.Range(0, rooms.GetLength(1));
+                if (rooms[endX, endY] == null)
+                {
+                    // spawn end room
+                    rooms[endX, endY] = Instantiate(roomTypes[3], new Vector3( 0, 0, 0), Quaternion.identity, currentFloor.transform);
+                    // set position
+                    rooms[endX, endY].transform.localPosition = new Vector3( endX * roomSize, 0, endY * roomSize);
                 }
             }
             
@@ -93,7 +108,7 @@ public class HouseGenerator : MonoBehaviour
                     if (rooms[x, y] == null)
                     {
                         // spawn a random room type that is not stair components or the start room
-                        rooms[x, y] = Instantiate(roomTypes[Random.Range(3, roomTypes.Count)], new Vector3(0, 0, 0), Quaternion.identity, currentFloor.transform);
+                        rooms[x, y] = Instantiate(roomTypes[Random.Range(4, roomTypes.Count)], new Vector3( 0, 0, 0), Quaternion.identity, currentFloor.transform);
                         // set the position of each room
                         rooms[x, y].transform.localPosition = new Vector3( x * roomSize, 0, y * roomSize);
                     }
@@ -105,7 +120,7 @@ public class HouseGenerator : MonoBehaviour
 
         // spawns roof
         GameObject roof = Instantiate(ceiling,
-            new Vector3(0, numOfFloors * floorHeight, 0), Quaternion.identity, transform);
+            new Vector3( 0, numOfFloors * floorHeight, 0), Quaternion.identity, transform);
         // adds roof to list
         currentHouseComp.Add(roof);
         GetComponent<NavMeshSurface>()?.BuildNavMesh();

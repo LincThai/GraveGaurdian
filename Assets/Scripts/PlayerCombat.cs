@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -80,8 +81,13 @@ public class PlayerCombat : MonoBehaviour
         // check if player dies(Loses)
         if (currentPlayerHealth <= 0)
         {
-            Debug.Log("You Lose");
+            PlayerDeath();
         }
+    }
+
+    public void PlayerDeath()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void OnDrawGizmosSelected()

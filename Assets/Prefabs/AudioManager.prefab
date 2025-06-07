@@ -60,7 +60,7 @@ MonoBehaviour:
     source: {fileID: 0}
     mixerGroup: {fileID: -6106976113803075713, guid: 53a7ec06a81b2cc4a9c44501c8196aea, type: 2}
   - name: EnemyHurt
-    clip: {fileID: 8300000, guid: 91193c7ab29bdc142aa0412946e3e602, type: 3}
+    clip: {fileID: 8300000, guid: c3737a67d1ea91448bde601f2f469e3d, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -68,15 +68,15 @@ MonoBehaviour:
     mixerGroup: {fileID: -6106976113803075713, guid: 53a7ec06a81b2cc4a9c44501c8196aea, type: 2}
   - name: Death
     clip: {fileID: 8300000, guid: 946a4465b72dab243918d808ecda390c, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
     mixerGroup: {fileID: -6106976113803075713, guid: 53a7ec06a81b2cc4a9c44501c8196aea, type: 2}
   - name: PlayerHurt
     clip: {fileID: 8300000, guid: a0631743cd501fb4ab268a250cdee9f0, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
     mixerGroup: {fileID: -6106976113803075713, guid: 53a7ec06a81b2cc4a9c44501c8196aea, type: 2}
