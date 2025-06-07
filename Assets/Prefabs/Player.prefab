@@ -1919,7 +1919,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 419
+  m_VersionIndex: 431
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2261,6 +2261,7 @@ MonoBehaviour:
   attackRate: 2
   maxPlayerHealth: 200
   currentPlayerHealth: 0
+  healthBar: {fileID: 0}
 --- !u!95 &7546372120844108105
 Animator:
   serializedVersion: 7

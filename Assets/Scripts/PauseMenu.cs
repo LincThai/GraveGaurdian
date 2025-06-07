@@ -28,7 +28,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     // Resume pausing and hiding UI
-    void Resume()
+    public void Resume()
     {
         // disable pause menu ui
         pauseMenuUI.SetActive(false);

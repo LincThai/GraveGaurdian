@@ -65,11 +65,14 @@ public class EnemyController : MonoBehaviour
 
     public void AttackPlayer()
     {
-        // detect everything that is hit
-        Collider[] hitPlayers = Physics.OverlapSphere(attackPoint.position, attackRange, PlayerLayers);
-
         // play an attack animation
         enemyAnimator.SetTrigger("Attack");
+
+        // play slash/attack sound
+        FindObjectOfType<AudioManager>().Play("Slash");
+
+        // detect everything that is hit
+        Collider[] hitPlayers = Physics.OverlapSphere(attackPoint.position, attackRange, PlayerLayers);
 
         // deal damage
         foreach (Collider player in hitPlayers)

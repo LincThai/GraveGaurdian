@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2262291700961627964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2924292710158031884}
+  - component: {fileID: 4997117195685280805}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2924292710158031884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2262291700961627964}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4997117195685280805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2262291700961627964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53488ba6a3b124479726d5189eddc34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: BGM
+    clip: {fileID: 8300000, guid: 76b4979710930564fbe8b3d583183112, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    mixerGroup: {fileID: -6018082528571476289, guid: 53a7ec06a81b2cc4a9c44501c8196aea, type: 2}
+  - name: Slash
+    clip: {fileID: 8300000, guid: 90de78e65bdd9cd4292b7e1c59370930, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -6106976113803075713, guid: 53a7ec06a81b2cc4a9c44501c8196aea, type: 2}
+  - name: EnemyHurt
+    clip: {fileID: 8300000, guid: 91193c7ab29bdc142aa0412946e3e602, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -6106976113803075713, guid: 53a7ec06a81b2cc4a9c44501c8196aea, type: 2}
+  - name: Death
+    clip: {fileID: 8300000, guid: 946a4465b72dab243918d808ecda390c, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -6106976113803075713, guid: 53a7ec06a81b2cc4a9c44501c8196aea, type: 2}
+  - name: PlayerHurt
+    clip: {fileID: 8300000, guid: a0631743cd501fb4ab268a250cdee9f0, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -6106976113803075713, guid: 53a7ec06a81b2cc4a9c44501c8196aea, type: 2}
+  mainMixer: {fileID: 24100000, guid: 53a7ec06a81b2cc4a9c44501c8196aea, type: 2}

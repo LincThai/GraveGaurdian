@@ -23,6 +23,9 @@ public class Enemy : MonoBehaviour
         // hurt animation play
         enemyAnimator.SetTrigger("Hurt");
 
+        // play hurt sound
+        FindObjectOfType<AudioManager>().Play("EnemyHurt");
+
         // check if they die
         if (currentHealth <= 0)
         {
@@ -34,6 +37,9 @@ public class Enemy : MonoBehaviour
     {
         // play a death animation
         enemyAnimator.SetBool("IsDead", true);
+
+        // play a death sound
+        FindObjectOfType<AudioManager>().Play("Death");
 
         // disable or destroy the enemy
         Destroy(gameObject);

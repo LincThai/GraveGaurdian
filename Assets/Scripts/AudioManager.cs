@@ -1,19 +1,21 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
     // set variables
     public Sound[] sounds;
+    public AudioMixer mainMixer;
 
-    public static AudioManager Instance;
+    public static AudioManager instance;
 
     private void Awake()
     {
         // singleton to ensure there is only one audiomanager
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
         }
         else
         {
@@ -41,8 +43,13 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        // set audioMixer Values from player prefs saved in settings
+        mainMixer.SetFloat("MainVolume", PlayerPrefs.GetFloat("mainVolume", 0));
+        mainMixer.SetFloat("BGMVolume", PlayerPrefs.GetFloat("bgmVolume", 0));
+        mainMixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat("sfxVolume", 0));
+
         // plays background music.
-        Play("Background");
+        Play("BGM");
     }
 
     public void Play(string name)

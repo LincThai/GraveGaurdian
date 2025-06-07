@@ -17,11 +17,13 @@ public class PlayerCombat : MonoBehaviour
 
     public int maxPlayerHealth = 200;
     public int currentPlayerHealth;
+    public HealthBar healthBar;
 
     void Start()
     {
         // set health
         currentPlayerHealth = maxPlayerHealth;
+        healthBar.SetMaxHealth(maxPlayerHealth);
     }
 
     // Update is called once per frame
@@ -41,14 +43,20 @@ public class PlayerCombat : MonoBehaviour
 
         if (currentPlayerHealth > maxPlayerHealth)
         {
+            // ensures player health does not go above the maximum
             currentPlayerHealth = maxPlayerHealth;
         }
+
+        healthBar.SetHealth(currentPlayerHealth);
     }
 
     public void Attack()
     {
         // trigger an attack parameter in the animator to play the attack animation
         playerAnimator.SetTrigger("Attack");
+
+        // play slash/attack sound
+        FindObjectOfType<AudioManager>().Play("Slash");
 
         // detect enemies in range of attack
         Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
@@ -65,6 +73,9 @@ public class PlayerCombat : MonoBehaviour
     {
         // deal the damage
         currentPlayerHealth -= damage;
+
+        // play the hurt sound for the player
+        FindObjectOfType<AudioManager>().Play("PlayerHurt");
 
         // check if player dies(Loses)
         if (currentPlayerHealth <= 0)
