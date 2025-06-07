@@ -38,6 +38,9 @@ public class AudioManager : MonoBehaviour
 
             // assign whether the sound will loop
             s.source.loop = s.loop;
+
+            // assign mixer groups
+            s.source.outputAudioMixerGroup = s.mixerGroup;
         }
     }
 
